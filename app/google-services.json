@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "22871421093",
+    "firebase_url": "https://guido-a1e07-default-rtdb.firebaseio.com",
+    "project_id": "guido-a1e07",
+    "storage_bucket": "guido-a1e07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22871421093:android:4767db2d63f5d2d13a1d4c",
+        "android_client_info": {
+          "package_name": "com.example.guido"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBW_MrS4ON9dHF7UPnMP6qQyj9XSV6N_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22871421093:android:c62ec41fc8ea51ef3a1d4c",
+        "android_client_info": {
+          "package_name": "com.example.homepage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBW_MrS4ON9dHF7UPnMP6qQyj9XSV6N_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22871421093:android:e1a17edb42404bed3a1d4c",
+        "android_client_info": {
+          "package_name": "com.project.guido_yourtrekmate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBW_MrS4ON9dHF7UPnMP6qQyj9XSV6N_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
