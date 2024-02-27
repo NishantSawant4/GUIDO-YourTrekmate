@@ -2,6 +2,7 @@ package com.project.guido_yourtrekmate;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -44,8 +47,10 @@ public class myAdapter extends RecyclerView.Adapter<myViewHolder> {
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailActivity.class);
                 intent.putExtra("Image",dataList.get(holder.getAdapterPosition()).getDataImage());
-
-
+                intent.putExtra("Title",dataList.get(holder.getAdapterPosition()).getDataTitle());
+                intent.putExtra("Desc",dataList.get(holder.getAdapterPosition()).getDataDesc());
+                intent.putExtra("Loc",dataList.get(holder.getAdapterPosition()).getDataLoc());
+                intent.putExtra("Rat",dataList.get(holder.getAdapterPosition()).getDataRat());
 
                 context.startActivity(intent);
             }
@@ -54,7 +59,6 @@ public class myAdapter extends RecyclerView.Adapter<myViewHolder> {
 
     @Override
     public int getItemCount() {
-
         return dataList.size();
     }
 }

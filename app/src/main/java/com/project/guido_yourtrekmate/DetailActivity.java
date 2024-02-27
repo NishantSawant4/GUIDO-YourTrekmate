@@ -9,12 +9,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.tabs.TabLayout;
 
 public class DetailActivity extends AppCompatActivity {
     ImageButton imageButton;
-
+    TextView detailTitle,detailDesc, detailRat, detailLoc;
+    ImageView imageView;
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
@@ -26,6 +29,20 @@ public class DetailActivity extends AppCompatActivity {
         tabLayout =findViewById(R.id.tl_detail);
         viewPager =findViewById(R.id.vp_detail);
         imageButton =findViewById(R.id.iv_back);
+        imageView =findViewById(R.id.iv_trek);
+        detailTitle = findViewById(R.id.tv_title);
+        detailDesc=findViewById(R.id.tv_desc);
+        detailLoc=findViewById(R.id.tv_Loc);
+        detailRat=findViewById(R.id.tv_Rat);
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            detailTitle.setText(bundle.getString("Title"));
+            detailDesc.setText(bundle.getString("Desc"));
+            detailLoc.setText(bundle.getString("Loc"));
+            detailRat.setText(bundle.getString("Rat"));
+            Glide.with(this).load(bundle.getString("Image")).into(imageView);
+        }
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +56,6 @@ public class DetailActivity extends AppCompatActivity {
 
         tabLayout.setupWithViewPager(viewPager);
         VPAdapter vpAdapter = new VPAdapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        vpAdapter.addFragment(new Detail(),"Detail");
         vpAdapter.addFragment(new Review(),"Review");
         vpAdapter.addFragment(new Weather(),"Weather");
         viewPager.setAdapter(vpAdapter);
