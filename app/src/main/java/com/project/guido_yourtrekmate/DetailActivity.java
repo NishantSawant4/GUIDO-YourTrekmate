@@ -16,7 +16,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class DetailActivity extends AppCompatActivity {
     ImageButton imageButton;
-    TextView detailTitle,detailDesc, detailRat, detailLoc;
+    TextView detailTitle,detailDesc, detailRat, detailLoc, detailDist, detailTime, detailMonth;
     ImageView imageView;
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -34,6 +34,10 @@ public class DetailActivity extends AppCompatActivity {
         detailDesc=findViewById(R.id.tv_desc);
         detailLoc=findViewById(R.id.tv_Loc);
         detailRat=findViewById(R.id.tv_Rat);
+        detailDist=findViewById(R.id.tv_distance);
+        detailTime=findViewById(R.id.tv_time);
+        detailMonth=findViewById(R.id.tv_month);
+
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
@@ -41,6 +45,9 @@ public class DetailActivity extends AppCompatActivity {
             detailDesc.setText(bundle.getString("Desc"));
             detailLoc.setText(bundle.getString("Loc"));
             detailRat.setText(bundle.getString("Rat"));
+            detailDist.setText(bundle.getString("Dist"));
+            detailTime.setText(bundle.getString("Time"));
+            detailMonth.setText(bundle.getString("Month"));
             Glide.with(this).load(bundle.getString("Image")).into(imageView);
         }
 

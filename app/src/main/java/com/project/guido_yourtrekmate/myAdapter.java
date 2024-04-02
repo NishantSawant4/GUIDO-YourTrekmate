@@ -51,7 +51,9 @@ public class myAdapter extends RecyclerView.Adapter<myViewHolder> {
                 intent.putExtra("Desc",dataList.get(holder.getAdapterPosition()).getDataDesc());
                 intent.putExtra("Loc",dataList.get(holder.getAdapterPosition()).getDataLoc());
                 intent.putExtra("Rat",dataList.get(holder.getAdapterPosition()).getDataRat());
-
+                intent.putExtra("Dist",dataList.get(holder.getAdapterPosition()).getDataDist());
+                intent.putExtra("Time",dataList.get(holder.getAdapterPosition()).getDataTime());
+                intent.putExtra("Month",dataList.get(holder.getAdapterPosition()).getDataMonth());
                 context.startActivity(intent);
             }
         });
